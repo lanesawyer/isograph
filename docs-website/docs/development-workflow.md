@@ -1,5 +1,16 @@
 # Development workflow
 
+## Getting Started
+
+Welcome to the project! Follow these steps to get your local environment set up:
+
+1. Clone the repository
+2. Ensure [Node.js](https://nodejs.org/) is on your system
+3. Ensure [Rust](https://www.rust-lang.org/) is on your system
+4. Install [`cargo -watch`](https://github.com/watchexec/cargo-watch)
+5. Run `pnpm install` in the root directory
+6. Run `pnpm -r compile` in the root directory
+
 ## Useful commands to run in the Isograph repository
 
 ### Build the compiler in watch mode
