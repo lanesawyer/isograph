@@ -1,6 +1,6 @@
 use std::path::PathBuf;
 
-use serde::Deserialize;
+use serde::{Deserialize, Serialize};
 
 pub static ISOGRAPH_FOLDER: &str = "__isograph";
 
@@ -8,7 +8,7 @@ use std::error::Error;
 
 use colorize::AnsiColor;
 
-#[derive(Debug)]
+#[derive(Debug, Serialize)]
 pub struct CompilerConfig {
     /// The folder where the compiler should look for Isograph literals
     pub project_root: PathBuf,
@@ -23,12 +23,12 @@ pub struct CompilerConfig {
     pub options: ConfigOptions,
 }
 
-#[derive(Default, Debug, Clone, Copy)]
+#[derive(Default, Debug, Clone, Copy, Serialize)]
 pub struct ConfigOptions {
     pub on_invalid_id_type: OptionalValidationLevel,
 }
 
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone, Copy, Serialize)]
 pub enum OptionalValidationLevel {
     /// If this validation error is encountered, it will be ignored
     Ignore,

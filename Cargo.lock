@@ -726,6 +726,8 @@ dependencies = [
  "notify-debouncer-full",
  "pretty-duration",
  "regex",
+ "serde",
+ "serde_json",
  "thiserror",
  "tokio",
 ]
