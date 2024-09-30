@@ -2,6 +2,11 @@ name: CI
 
 on: [push, pull_request]
 
+concurrency:
+    # Cancels workflows that are already running when a new one is triggered for a PR
+    group: ${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: true
+
 permissions:
   contents: read
   pages: write
