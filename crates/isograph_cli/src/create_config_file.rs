@@ -4,6 +4,9 @@ use crate::{opt, CONFIG_FILE_NAME};
 use colored::Colorize;
 use isograph_config::CompilerConfig;
 
+// TODO: Probably should use create_config from compilation_options.rs and extend that to pass in the
+// stuff they provided on the command lin
+
 /// Creates a config file based on the command parameters provided
 pub fn create_config_file(create_config_file_command: opt::CreateConfigFileCommand) {
     let config_location = create_config_file_command.config.clone();
